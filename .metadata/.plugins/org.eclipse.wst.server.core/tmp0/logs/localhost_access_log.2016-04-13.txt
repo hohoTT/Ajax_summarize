@@ -45,3 +45,14 @@
 0:0:0:0:0:0:0:1 - - [13/Apr/2016:11:07:02 +0800] "GET /AjaxHelloDemo/html/files/andy.html HTTP/1.1" 200 149
 0:0:0:0:0:0:0:1 - - [13/Apr/2016:11:07:04 +0800] "GET /AjaxHelloDemo/html/files/richard.html HTTP/1.1" 200 152
 0:0:0:0:0:0:0:1 - - [13/Apr/2016:11:07:06 +0800] "GET /AjaxHelloDemo/html/files/jeremy.html HTTP/1.1" 200 155
+127.0.0.1 - - [13/Apr/2016:12:16:24 +0800] "GET /AjaxHelloDemo/xml/index.html HTTP/1.1" 200 1763
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:16:33 +0800] "GET /AjaxHelloDemo/xml/index.html HTTP/1.1" 200 1763
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:16:37 +0800] "GET /AjaxHelloDemo/xml/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:16:39 +0800] "GET /AjaxHelloDemo/xml/files/andy.xml HTTP/1.1" 200 164
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:16:45 +0800] "GET /AjaxHelloDemo/xml/files/richard.xml HTTP/1.1" 200 173
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:16:51 +0800] "GET /AjaxHelloDemo/xml/files/jeremy.xml HTTP/1.1" 200 170
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:28:44 +0800] "GET /AjaxHelloDemo/xml/index.html HTTP/1.1" 200 2568
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:28:47 +0800] "GET /AjaxHelloDemo/xml/files/andy.xml HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:28:49 +0800] "GET /AjaxHelloDemo/xml/files/richard.xml HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:28:51 +0800] "GET /AjaxHelloDemo/xml/files/jeremy.xml HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:12:29:42 +0800] "GET /AjaxHelloDemo/xml/index.html HTTP/1.1" 200 2605
