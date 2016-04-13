@@ -23,14 +23,25 @@
 			// 以下的为添加带有时间戳的 url 形式
 			// new Date() 为 js 的对象，并不是 java 中的 date 对象
 			var url = this.href + "?time=" + new Date();
-			
-			var method = "GET";
+
+			// 以下为测试 get 请求的方式 
+			//var method = "GET";
+
+			// 以下为测试 post 请求的方式
+			var method = "POST";
 			
 			// 5. 调用 XMLHttpRequest 对象的 open 方法
 			request.open(method, url);
+
+			// 以下为使用 post 请求方式的时候使用的
+			request.setRequestHeader("ContentType", "application/x-www-form-urlencoded");
 			
 			// 6. 调用 XMLHttpRequest 对象的 send 方法
-			request.send(null);
+			// get 方式
+			// request.send(null);
+
+			// post 方式
+			request.send("name='hohoTT'");
 			
 			// 7. 为 XMLHttpRequest 对象添加 onreadystatechange 响应函数
 			request.onreadystatechange = function(){

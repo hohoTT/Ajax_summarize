@@ -1,4 +1,4 @@
-1. 关于xmlhttprequest的readystate属性的五个状态
+一、  关于xmlhttprequest的readystate属性的五个状态
 
 		创建 xmlhttprequest 对象之后没有调用 open之 前readystate值为0，
 	调用 open()之后就变为1了，并且此时 onreadystatechange 函数与 open() 
@@ -43,6 +43,30 @@
 			概而括之，整个XMLHttpRequest对象的生命周期应该包含如下阶段：
 			
 				创建－初始化请求－发送请求－接收数据－解析数据－完成
+				
+二、 Ajax 中数据格式的总结
+	
+	1. 数据格式为 html 的形式
+		
+		<1>. 优点：
+			
+			① 从服务器端发送的 HTML 代码在浏览器不需要用 JavaScript 进行解析
+			② HTML 的可读性好
+			③ HTML 代码块与 innerHtml 属性搭配，效率高
+		
+		<2>. 缺点：
+			
+			① 若需要通过 AJAX 更新一片文章	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
 			
 			
 			

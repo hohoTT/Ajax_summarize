@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The html/Index Page</title>
+
+<script type="text/javascript">
+
+	window.onload = function(){
+
+		var aNodes = document.getElementsByTagName("a");
+		
+		for(var i = 0; i < aNodes.length; i++){
+			aNodes[i].onclick = function(){
+
+				var request = new XMLHttpRequest();
+
+				var method = "GET";
+				var url = this.href;
+
+				request.open(method, url);
+				request.send(null);
+
+				
+				
+				return false;
+			}
+		}
+		
+	}
+
+</script>
+
+</head>
+<body>
+	
+	<h1>The html/Index Page</h1><hr/>
+	
+	<h2>People</h2><br>
+	
+	<ul>
+		
+		<li>
+			<a href="files/andy.html">Andy</a>
+		</li>
+		
+		<li>
+			<a href="files/richard.html">Richard</a>
+		</li>
+		
+		<li>
+			<a href="files/jeremy.html">Jeremy</a>
+		</li>
+		
+	</ul>
+	
+	<div id="details"></div>
+	
+</body>
+</html>

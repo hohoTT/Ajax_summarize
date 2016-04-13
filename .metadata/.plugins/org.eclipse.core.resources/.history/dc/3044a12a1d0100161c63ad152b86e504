@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	window.onload = function(){
+		
+		// 1. 获取 a 节点，并为其添加 onclick 响应函数
+		document.getElementsByTagName("a")[0].onclick = function(){
+
+			// 3. 创建一个 XMLHttpRequest 对象
+			var request = new XMLHttpRequest();
+			
+			// 4. 准备发送请求的数据： url
+			// 以下为之前较早的 url 形式
+			//var url = this.href;
+			
+			// 以下的为添加带有时间戳的 url 形式
+			// new Date() 为 js 的对象，并不是 java 中的 date 对象
+			var url = this.href + "?time=" + new Date();
+
+			// 以下为测试 get 请求的方式 
+			//var method = "GET";
+
+			// 以下为测试 post 请求的方式
+			var method = "POST";
+			
+			// 5. 调用 XMLHttpRequest 对象的 open 方法
+			request.open(method, url);
+
+			// 以下为使用 post 请求方式的时候使用的
+			request.setRequestHeader("ContentType", "application/x-www-form-urlencoded");
+			
+			// 6. 调用 XMLHttpRequest 对象的 send 方法
+			request.send(null);
+			
+			// 7. 为 XMLHttpRequest 对象添加 onreadystatechange 响应函数
+			request.onreadystatechange = function(){
+
+				// 以下的 alert 为测试 request.readyState 的变化过程，直到 request.readyState 为 4 的时候表示响应的完成 
+				//alert(request.readyState);
+				
+				// 8. 判断响应是否完成：XMLHttpRequest 对象的 readyState 属性值为 4 的时候，表示响应完成
+				if(request.readyState == 4){
+
+					// request.readyState == 4 表示响应完成，但是并不代表响应可用
+					// 还需要做以下的判断：即第 9 步 
+					// 9. 再判断响应是否可用： XMLHttpRequest 对象的 status 属性值为 200
+					if(request.status == 200 || request.status == 304){
+
+						// 10. 打印响应的结果： responseTest
+						alert(request.responseText);
+					}
+				}
+			}
+			
+			// 2. 取消 a 节点的默认行为
+			return false;	
+		}
+	}
+
+</script>
+
+</head>
+<body>
+
+	<h1>The Index Page</h1><hr/>
+	
+	<a href="helloAjax.txt">HelloAjax</a><br/>
+
+</body>
+</html>

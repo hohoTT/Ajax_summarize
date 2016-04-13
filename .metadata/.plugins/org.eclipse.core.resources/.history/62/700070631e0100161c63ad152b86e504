@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>The html/Index Page</h1><hr/>
+	
+	<h2>People</h2><br>
+	
+	<ul>
+		
+		<li>
+			<a href="files/andy.html">Andy</a>
+		</li>
+		
+		<li>
+			<a href=""></a>
+		</li>
+		
+		<li>
+			<a href=""></a>
+		</li>
+		
+	</ul>
+	
+</body>
+</html>
