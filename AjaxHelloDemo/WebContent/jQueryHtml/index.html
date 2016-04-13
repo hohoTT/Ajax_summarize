@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The html/Index Page</title>
+
+<!-- 引用 jQuery 的 js 资源 -->
+
+<script type="text/javascript" src="../scripts/jquery-1.8.3.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+
+		$("a").click(function(){
+
+			// 以下为通常的 url 形式，即将获取的全部内容进行传递
+			var url = this.href;
+
+			// 以下为指定获取响应内容的 url 形式，以下测试的是获取 h2 中的 a 标签
+			var url_h2_a = this.href + " h2 a";
+			
+			var args = {"time" : new Date()};
+
+			// 任何一个 html 节点都可以使用 load 方法来加载 Ajax，结果将直接插入到这个html 节点中
+			$("#details").load(url_h2_a, args);
+			
+			return false;
+		})
+		
+	})
+	
+</script>
+
+</head>
+<body>
+	
+	<h1>The html/Index Page</h1><hr/>
+	
+	<h2>People</h2><br>
+	
+	<ul>
+		
+		<li>
+			<a href="files/andy.html">Andy</a>
+		</li>
+		
+		<li>
+			<a href="files/richard.html">Richard</a>
+		</li>
+		
+		<li>
+			<a href="files/jeremy.html">Jeremy</a>
+		</li>
+		
+	</ul>
+	
+	<div id="details"></div>
+	
+</body>
+</html>

@@ -8732,3 +8732,20 @@ org.jboss.tools.vpe.xulrunner.XulRunnerBundleNotFoundException: Bundle org.mozil
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+
+!ENTRY org.jboss.tools.vpe.preview.core 4 0 2016-04-13 15:44:34.918
+!MESSAGE Connection reset
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at org.jboss.tools.vpe.preview.core.server.VpvSocketProcessor.getInitialRequestLine(VpvSocketProcessor.java:235)
+	at org.jboss.tools.vpe.preview.core.server.VpvSocketProcessor.run(VpvSocketProcessor.java:59)
+	at java.lang.Thread.run(Unknown Source)
