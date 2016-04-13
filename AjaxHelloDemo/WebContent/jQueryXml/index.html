@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The xml/Index Page</title>
+
+<!-- 引用 jQuery 的 js 资源 -->
+
+<script type="text/javascript" src="../scripts/jquery-1.8.3.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+
+		$("a").click(function(){
+
+			var url = this.href;
+			var args = {"time" : new Date()};
+
+			// 将结果放在回调函数的参数中
+			// 以下调用 get 方法或者 post 方法  $.get  或者  $.post
+			/*
+				以下为具体参数的解释说明：
+					<1> url: 从哪个具体的 url 下获取响应的数值 
+					<2> agrs: JSON 格式
+					<3> function: 回调函数：当响应结束时，回调函数被触发，响应的结果放入到 data 中，
+						此时的 data 为被 jQuery 包装的 jQuery 对象
+			*/
+			$.post(url, args, function(data){
+
+				var name = $(data).find("name").text();
+				var website = $(data).find("website").text();
+				var email = $(data).find("email").text();
+
+				// 将获取的内容加入到  id 为 details的 div 容器中
+				/*
+					具体的过程：
+						<1> 首先将 id 为 details的 div 容器的内容清空
+						<2> 之后将获取的数值进行到id 为 details的 div 容器的填充
+				*/
+				$("#details").empty().append("<h2><a href='mailto : " + email + "'>" + name + "</a></h2>")
+				 					 .append("<a href='" + website + "'>" + website + "</a></h2>");
+				 
+			});
+
+			
+			return false;
+		});
+		
+	});
+
+</script>
+
+</head>
+<body>
+	
+	<h1>The xml/Index Page</h1><hr/>
+	
+	<h2>People</h2><br>
+	
+	<ul>
+		
+		<li>
+			<a href="files/andy.xml">Andy</a>
+		</li>
+		
+		<li>
+			<a href="files/richard.xml">Richard</a>
+		</li>
+		
+		<li>
+			<a href="files/jeremy.xml">Jeremy</a>
+		</li>
+		
+	</ul>
+	
+	<div id="details"></div>
+	
+</body>
+</html>
