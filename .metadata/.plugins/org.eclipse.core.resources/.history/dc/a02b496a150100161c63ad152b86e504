@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	window.onload = function(){
+		// 1. 获取 a 节点，并为其添加 onclick 响应函数
+		document.getElementsByTagName("a")[0].onclick = function(){
+
+			// 3. 创建一个 XMLHttpRequest 对象
+			var request = new XMLHttpRequest();
+			
+			// 4. 准备发送请求的数据： url
+			var url = this.href;
+			var method = "GET";
+			
+			// 5. 调用 XMLHttpRequest 对象的 open 方法
+			request.open(method, url);
+			
+			// 6. 调用 XMLHttpRequest 对象的 send 方法
+			
+			
+			// 7. 为 XMLHttpRequest 对象添加 onreadystatechange 响应函数
+			
+			// 8. 判断响应是否完成：XMLHttpRequest 对象的 readyState 属性值为 4 的时候，表示响应完成
+			
+			// 9. 再判断响应是否可用： XMLHttpRequest 对象的 status 属性值为 200
+			
+			// 10. 打印响应的结果： responseTest
+			
+			
+			// 2. 取消 a 节点的默认行为
+			return false;	
+		}
+	}
+
+</script>
+
+</head>
+<body>
+
+	<h1>The Index Page</h1><hr/>
+	
+	<a href="helloAjax.txt">HelloAjax</a><br/>
+
+</body>
+</html>
