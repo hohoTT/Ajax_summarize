@@ -26,6 +26,13 @@
 					<3> function: 回调函数：当响应结束时，回调函数被触发，响应的结果放入到 data 中，
 						此时的 data 为被 jQuery 包装的 jQuery 对象
 			*/
+			// 返回的直接为 json 对象，即这里的 data
+			/*
+				 此时的方法可以有两种写法：
+				   <1> $.getJSON(url, args, function(data){...})
+				   <2> $.get(url, args, function(data){...}, "json")
+
+			*/
 			$.getJSON(url, args, function(data){
 	
 				var name = data.person.name;
