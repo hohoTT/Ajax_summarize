@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>The jQueryXml/Index Page</title>
+<title>The json/Index Page</title>
 
 <!-- 引用 jQuery 的 js 资源 -->
 
@@ -11,14 +11,14 @@
 <script type="text/javascript">
 
 	$(function(){
-
+	
 		$("a").click(function(){
-
+	
 			var url = this.href;
 			var args = {"time" : new Date()};
-
+	
 			// 将结果放在回调函数的参数中
-			// 以下调用 get 方法或者 post 方法  $.get  或者  $.post
+			// 以下调用 getJSON 方法 即 $.getJSON
 			/*
 				以下为具体参数的解释说明：
 					<1> url: 从哪个具体的 url 下获取响应的数值 
@@ -26,12 +26,12 @@
 					<3> function: 回调函数：当响应结束时，回调函数被触发，响应的结果放入到 data 中，
 						此时的 data 为被 jQuery 包装的 jQuery 对象
 			*/
-			$.post(url, args, function(data){
-
-				var name = $(data).find("name").text();
-				var website = $(data).find("website").text();
-				var email = $(data).find("email").text();
-
+			$.getJSON(url, args, function(data){
+	
+				var name = data.person.name;
+				var website = data.person.website;
+				var email = data.person.email;
+	
 				// 将获取的内容加入到  id 为 details的 div 容器中
 				/*
 					具体的过程：
@@ -42,7 +42,7 @@
 				 					 .append("<a href='" + website + "'>" + website + "</a></h2>");
 				 
 			});
-
+	
 			
 			return false;
 		});
@@ -54,22 +54,22 @@
 </head>
 <body>
 	
-	<h1>The jQueryXml/Index Page</h1><hr/>
+	<h1>The jQueryjson/Index Page</h1><hr/>
 	
 	<h2>People</h2><br>
 	
 	<ul>
 		
 		<li>
-			<a href="files/andy.xml">Andy</a>
+			<a href="files/andy.json">Andy</a>
 		</li>
 		
 		<li>
-			<a href="files/richard.xml">Richard</a>
+			<a href="files/richard.json">Richard</a>
 		</li>
 		
 		<li>
-			<a href="files/jeremy.xml">Jeremy</a>
+			<a href="files/jeremy.json">Jeremy</a>
 		</li>
 		
 	</ul>

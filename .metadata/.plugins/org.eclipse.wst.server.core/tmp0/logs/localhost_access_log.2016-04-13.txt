@@ -175,3 +175,10 @@
 0:0:0:0:0:0:0:1 - - [13/Apr/2016:16:40:03 +0800] "GET /AjaxHelloDemo/jQueryXml/mailto%20:%20jeremy@hohoTT.com HTTP/1.1" 404 1059
 0:0:0:0:0:0:0:1 - - [13/Apr/2016:16:41:37 +0800] "GET /AjaxHelloDemo/jQueryXml/index.html HTTP/1.1" 200 1501
 0:0:0:0:0:0:0:1 - - [13/Apr/2016:16:41:39 +0800] "POST /AjaxHelloDemo/jQueryXml/files/andy.xml HTTP/1.1" 200 164
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:33:46 +0800] "GET /AjaxHelloDemo/jQueryXml/index.html HTTP/1.1" 200 1829
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:33:46 +0800] "GET /AjaxHelloDemo/scripts/jquery-1.8.3.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:33:51 +0800] "GET /AjaxHelloDemo/jQueryJson/index.html HTTP/1.1" 200 1810
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:34:55 +0800] "GET /AjaxHelloDemo/jQueryJson/index.html HTTP/1.1" 200 1816
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:34:59 +0800] "GET /AjaxHelloDemo/jQueryJson/files/andy.json?time=Wed+Apr+13+2016+21%3A34%3A59+GMT%2B0800+(%C3%A4%C2%B8%C2%AD%C3%A5%C2%9B%C2%BD%C3%A6%C2%A0%C2%87%C3%A5%C2%87%C2%86%C3%A6%C2%97%C2%B6%C3%A9%C2%97%C2%B4) HTTP/1.1" 200 120
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:35:05 +0800] "GET /AjaxHelloDemo/jQueryJson/files/richard.json?time=Wed+Apr+13+2016+21%3A35%3A05+GMT%2B0800+(%C3%A4%C2%B8%C2%AD%C3%A5%C2%9B%C2%BD%C3%A6%C2%A0%C2%87%C3%A5%C2%87%C2%86%C3%A6%C2%97%C2%B6%C3%A9%C2%97%C2%B4) HTTP/1.1" 200 129
+0:0:0:0:0:0:0:1 - - [13/Apr/2016:21:35:05 +0800] "GET /AjaxHelloDemo/jQueryJson/files/jeremy.json?time=Wed+Apr+13+2016+21%3A35%3A05+GMT%2B0800+(%C3%A4%C2%B8%C2%AD%C3%A5%C2%9B%C2%BD%C3%A6%C2%A0%C2%87%C3%A5%C2%87%C2%86%C3%A6%C2%97%C2%B6%C3%A9%C2%97%C2%B4) HTTP/1.1" 200 126
