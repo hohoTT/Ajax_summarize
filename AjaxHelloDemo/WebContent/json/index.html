@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The json/Index Page</title>
+
+<script type="text/javascript">
+
+	window.onload = function(){
+
+		var aNodes = document.getElementsByTagName("a");
+		
+		for(var i = 0; i < aNodes.length; i++){
+			aNodes[i].onclick = function(){
+
+				var request = new XMLHttpRequest();
+
+				var method = "GET";
+				var url = this.href;
+
+				request.open(method, url);
+				request.send(null);
+
+				request.onreadystatechange = function(){
+
+					if(request.readyState == 4){
+						if(request.status == 200 || request.status == 304){
+
+							// 1. 结果为json 格式，所以需要使用 responseTest 来获取
+							var result = request.responseText;
+							var testObject = eval("(" + result + ")");
+
+							// 2. 结果不能直接使用，必须先创建对应的节点，再把节点加入到 #details 中
+							// 目标格式如下：
+							/*
+								<h2><a href="mailto:andy@hohoTT.com">Andy hohoTT</a></h2> 
+								<a href="http://www.andy.com/">http://www.andy.com/</a>
+							*/
+
+							var name = testObject.person.name;
+							var website = testObject.person.website;
+							var email = testObject.person.email;
+
+							// 以下为获取参数的测试
+							//alert(name);
+							//alert(website);
+							//alert(email);
+
+							// 创建 <h2><a href="mailto:andy@hohoTT.com">Andy hohoTT</a></h2> 
+							var aNode = document.createElement("a");
+							aNode.appendChild(document.createTextNode(name));
+							aNode.href = "mailto" + email;
+
+							var h2Node = document.createElement("h2");
+							h2Node.appendChild(aNode);
+
+							// 创建 <a href="http://www.andy.com/">http://www.andy.com/</a>
+							var aNode2 = document.createElement("a");
+							aNode2.appendChild(document.createTextNode(website));
+							aNode2.href = website;
+
+							// 将创建好的两个标签添加到之前声明的 div 中
+							var detailsNode = document.getElementById("details");
+							detailsNode.innerHTML = "";
+							detailsNode.appendChild(h2Node);
+							detailsNode.appendChild(aNode2);
+							
+						}
+					}
+					
+				}
+				
+				return false;
+			}
+		}
+		
+	}
+
+</script>
+
+</head>
+<body>
+	
+	<h1>The json/Index Page</h1><hr/>
+	
+	<h2>People</h2><br>
+	
+	<ul>
+		
+		<li>
+			<a href="files/andy.json">Andy</a>
+		</li>
+		
+		<li>
+			<a href="files/richard.json">Richard</a>
+		</li>
+		
+		<li>
+			<a href="files/jeremy.json">Jeremy</a>
+		</li>
+		
+	</ul>
+	
+	<div id="details"></div>
+	
+</body>
+</html>

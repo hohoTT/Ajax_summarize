@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test Json</title>
+
+<script type="text/javascript">
+
+	var jsonObject = {
+				"name" : "hohoTT",
+				"age" :　12,
+				"address" : {"city" : "QingDao", "school" : "qdu"},
+				"teaching" : function(){
+					alert("json teaching...");
+				}
+	};
+
+	// 调用 json 数据
+	//alert(jsonObject.name);
+	//alert(jsonObject.address.city);
+	
+	// 同时 json 也可以是方法，以下为调用方法的过程
+	//jsonObject.teaching();
+	
+	// eval() 方法的练习,将字符串转换为本地的 js 代码来执行
+	//var testStr = "alert('hello eval')";
+	//eval(testStr);
+		
+	
+	// 把一个 字符串转为 json 对象
+	// 使用 eval() 方法来完成
+	var jsonStr = "{'name' : 'hohoTT'}";
+
+	// 把 json 字符串转换为 JSON 对象
+	var testObject = eval("(" + jsonStr + ")");
+	//alert(testObject.name);
+
+</script>
+
+</head>
+<body>
+
+	<h1>The Test Json</h1><hr/>
+
+</body>
+</html>
