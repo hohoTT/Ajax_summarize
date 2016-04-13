@@ -1,3 +1,3 @@
 # Ajax_summarize
 
-总结ajax的用法
+## 有关ajax的用法及其应用的总结
