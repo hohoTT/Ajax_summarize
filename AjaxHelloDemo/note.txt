@@ -161,7 +161,16 @@
 			I. JackSon 使用 getter 方法来定位 JSON 对象的属性，而不是字段！
 			II.  可以添加注解 com.fasterxml.jackson.annotation.JsonIgnore, 
 				   在转为 JSON 对象时来忽略某一个 getter 定义的属性
-	
+
+五、 Ajax 中实现三级联动的效果
+
+	需求：实现城市 -> 部门 -> 员工 -> 员工详情信息的 Ajax 显示
+		<1>. 3 张数据表
+			① locations:   location_id, city
+			② departments: department_id, department_name, location_id
+			③ employee: employee_id, last_name, salary, email, department_id
+		
+		<2>. 需要新学习的 jQuery 的一个插件: blockUI
 	
 	
 	

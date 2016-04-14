@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-4-14 19:22:55 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.wt.beans.Employee" table="EMPLOYEE">
+        <id name="employee_id" type="java.lang.Integer">
+            <column name="EMPLOYEE_ID" />
+            <generator class="native" />
+        </id>
+        <property name="last_name" type="java.lang.String">
+            <column name="LAST_NAME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="salary" type="double">
+            <column name="SALARY" />
+        </property>
+    </class>
+</hibernate-mapping>
