@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="WebSocket"/>
+<fullyQualifiedTypeName name="DocumentFragment"/>
+<fullyQualifiedTypeName name="Object"/>
+<fullyQualifiedTypeName name="Date"/>
 <fullyQualifiedTypeName name="Function"/>
 </qualifiedTypeNameHistroy>

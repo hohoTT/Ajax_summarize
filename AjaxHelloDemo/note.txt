@@ -18,9 +18,31 @@
 			     通常而言，load 方法加载后的数据是一个 HTML 片段
 			     例： 
 			     var $obj = ...
+			     var url = ...
+			     var agrs = { key : value }
 			     $obj.load(url, agrs)	
+			   
+		<2> 
+			① $.get ② $.post ③ $.getJSON : 
+				更加的灵活，除去使用 load 的情况，大部分时候使用这三个方法
+			
+			举例：
+				I. 基本的使用
+					// url : Ajax 请求的目标 URL
+					// args : 传递的参数 : JSON 类型
+					// data : Ajax 响应成功后的数据，可能是 XML, HTML, JSON
+					$.get(url, args, function(data){
+				
+					})
+					
+				II. 使用 JSON 数据
+					此时的方法可以有三种写法：
+				   <1> $.getJSON(url, args, function(data){...})
+				   <2> $.get(url, args, function(data){...}, "json")
+				   <3> $.post(url, args, function(data){...}, "json")
+		
 
-一、  关于xmlhttprequest的readystate属性的五个状态
+二、  关于xmlhttprequest的readystate属性的五个状态
 
 		创建 xmlhttprequest 对象之后没有调用 open之 前readystate值为0，
 	调用 open()之后就变为1了，并且此时 onreadystatechange 函数与 open() 
@@ -66,7 +88,7 @@
 			
 				创建－初始化请求－发送请求－接收数据－解析数据－完成
 				
-二、 Ajax 中数据格式的总结
+三、 Ajax 中数据格式的总结
 	
 	1. 数据格式为 HTML 的形式
 		

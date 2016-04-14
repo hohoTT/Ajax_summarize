@@ -28,9 +28,10 @@
 			*/
 			// 返回的直接为 json 对象，即这里的 data
 			/*
-				 此时的方法可以有两种写法：
+				 此时的方法可以有三种写法：
 				   <1> $.getJSON(url, args, function(data){...})
 				   <2> $.get(url, args, function(data){...}, "json")
+				   <3> $.post(url, args, function(data){...}, "json")
 
 			*/
 			$.getJSON(url, args, function(data){
