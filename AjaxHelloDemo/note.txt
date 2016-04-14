@@ -137,7 +137,30 @@
 		<2>. 如果数据需要重用，JSON 文件是个不错的选择，其在性能和文件大小方面都有优势
 		
 		<3>. 当远程应用程序未知时，XML 是首选，因为 XML 是 WEB 服务领域的 "世界语"
-	
+		
+四、 使用 JackSon
+
+	<1>. 加入 jar 包
+		jackson-annotations-2.2.3.jar
+		jackson-core-2.2.3.jar
+		jackson-databind-2.2.3.jar
+		
+	<2>. 具体的使用步骤：
+		
+		① 创建 ObjectMapper 对象
+		
+		② 调用 ObjectMapper 的 writeValueAsString 方法，把一个对象转为一个 JSON 字符串
+			举例如下：
+				Customer customer = new Customer("hohoTT", "007");
+				String jsonStr = mapper.writeValueAsString(customer);
+				System.out.println("jsonStr ----- " + jsonStr);
+				
+		③ JackSon 还可以转为一个 JSON 的 list 集合对象
+				   
+		④ 注意：
+			I. JackSon 使用 getter 方法来定位 JSON 对象的属性，而不是字段！
+			II.  可以添加注解 com.fasterxml.jackson.annotation.JsonIgnore, 
+				   在转为 JSON 对象时来忽略某一个 getter 定义的属性
 	
 	
 	

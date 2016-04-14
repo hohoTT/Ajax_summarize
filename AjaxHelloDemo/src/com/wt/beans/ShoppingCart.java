@@ -1,7 +1,6 @@
 package com.wt.beans;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class ShoppingCart {
