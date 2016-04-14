@@ -2,7 +2,50 @@
 
 ## 有关ajax的用法及其应用的总结
 
-### 一、 关于xmlhttprequest的readystate属性的五个状态
+### 一、 Ajax 部分介绍
+	
+	1. 什么是 Ajax
+		不用刷新页面，但是可以和服务器进行通信的方式，实现 Ajax 的主要方式为 XMLHttpRequest 对象
+	
+	2. 使用 XMLHttpRequest 对象实现 Ajax [了解，实际的开发中通常不用]
+	
+	3. Ajax 传输数据的 3 种方式
+		
+		<1> XML : 笨重, 解析困难，但是 XML 是通用的数据交换格式
+		<2> HTML : 不需要解析可以直接放到文档中，若仅更新一部分区域. 但是传输的数据有限，
+				且 HTML 代码需要拼装完成
+		<3> JSON : 小巧，有面向对象的特征，且有很多第三方的 jar 包可以把 Java 对象或集合转为 JSON 字符串
+		
+	4. 使用 jQuery 完成 Ajax 操作
+		
+		<1> load 方法 : 可以用于 HTML 文档的元素节点，把结果直接加为对应节点的子元素，
+			     通常而言，load 方法加载后的数据是一个 HTML 片段
+			     例： 
+			     var $obj = ...
+			     var url = ...
+			     var agrs = { key : value }
+			     $obj.load(url, agrs)	
+			   
+		<2> 
+			① $.get ② $.post ③ $.getJSON : 
+				更加的灵活，除去使用 load 的情况，大部分时候使用这三个方法
+			
+			举例：
+				I. 基本的使用
+					// url : Ajax 请求的目标 URL
+					// args : 传递的参数 : JSON 类型
+					// data : Ajax 响应成功后的数据，可能是 XML, HTML, JSON
+					$.get(url, args, function(data){
+				
+					})
+					
+				II. 使用 JSON 数据
+					此时的方法可以有三种写法：
+				   <1> $.getJSON(url, args, function(data){...})
+				   <2> $.get(url, args, function(data){...}, "json")
+				   <3> $.post(url, args, function(data){...}, "json")
+
+### 二、 关于xmlhttprequest的readystate属性的五个状态
 
 		创建 xmlhttprequest 对象之后没有调用 open之 前readystate值为0，
 	调用 open()之后就变为1了，并且此时 onreadystatechange 函数与 open() 
@@ -49,7 +92,7 @@
 				创建－初始化请求－发送请求－接收数据－解析数据－完成
 				
 
-### 二、 Ajax 中数据格式的总结
+### 三、 Ajax 中数据格式的总结
 	
 	1. 数据格式为 HTML 的形式
 		
