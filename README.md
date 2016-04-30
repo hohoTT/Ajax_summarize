@@ -1,6 +1,5 @@
 # Ajax_summarize
 
-
 ## 有关ajax的用法及其应用的总结
 
 ### 一、 Ajax 部分介绍
